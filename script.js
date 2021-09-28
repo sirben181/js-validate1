@@ -31,16 +31,18 @@ function validateInputs(){
         }
         else if(!isEmail(emailValue)){
             onError(email,'Thats an invalid email')
-        } else if(passwordValue.length<=8 ){
-            onError(password,'password too short! add atleast 8 characters')
-        }
-        else if(passwordValue.length>=20){
-            onError(password,'the password is too long,at most 20 characters')
         }
         else{onSuccess(email)
         }
         if(passwordValue===""){
             onError(password,"the password cannot be empty")
+        
+       
+        } else if(passwordValue.length<=8 ){
+            onError(password,'password too short! add atleast 8 characters')
+        }
+        else if(passwordValue.length>=20){
+            onError(password,'the password is too long,at most 20 characters')
         } else{
             onSuccess(password)
         }
